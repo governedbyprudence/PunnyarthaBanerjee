@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:punnyartha/routes/landingPageRoute.dart';
 import 'package:punnyartha/routes/splash.dart';
+import 'package:punnyartha/themes/darkTheme.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 void main() {
@@ -13,7 +15,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder:(context,orientation,screenType)=> MaterialApp(
+        theme: AppThemes.darkTheme(),
         routes: {
+          LandingPageRoute.routeName:(context)=>const LandingPageRoute(),
           SplashScreenRoute.routeName:(context)=>const SplashScreenRoute()
         },
         initialRoute: SplashScreenRoute.routeName,
