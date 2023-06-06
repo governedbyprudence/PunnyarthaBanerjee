@@ -1,29 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:punnyartha/core/providers/optionProvider.dart';
+import 'package:punnyartha/routes/aboutPageRoute.dart';
+import 'package:punnyartha/routes/landingPageRoute.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class WebAppBar extends StatelessWidget with PreferredSizeWidget{
-  const WebAppBar({Key? key}) : super(key: key);
+  Color backgroundColor;
+  WebAppBar({Key? key,this.backgroundColor=Colors.white}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return PreferredSize(
-      preferredSize: Size.fromHeight(4.h),
-      child: AppBar(
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(onPressed: (){}, child:const Text("About",)),
-            _space(),
-            TextButton(onPressed: (){}, child:const Text("Skills")),
-            _space(),
-            TextButton(onPressed: (){}, child:const Text("Projects")),
-            _space(),
-            TextButton(onPressed: (){}, child:const Text("Contact")),
-            _space(),
-          ],
-        ),
-      ),
+    return Consumer<MenuOptionProvider>(
+      builder: (context,state,child) {
+        return PreferredSize(
+          preferredSize: Size.fromHeight(4.h),
+          child: AppBar(
+            backgroundColor: backgroundColor,
+            centerTitle: true,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(onPressed: (){
+                  state.change(MenuOption.home);
+                  Navigator.pushReplacementNamed(context, LandingPageRoute.routeName);
+                }, child:Text("Home",style: TextStyle(color: state.currentOption==MenuOption.home?Colors.black:Colors.grey),)),
+                _space(),
+                TextButton(onPressed: (){
+                  state.change(MenuOption.about);
+                  Navigator.pushReplacementNamed(context, AboutPageRoute.routeName);
+                }, child:Text("About",style: TextStyle(color: state.currentOption==MenuOption.about?Colors.black:Colors.grey),)),
+                _space(),
+                TextButton(onPressed: (){
+                  state.change(MenuOption.home);
+                }, child:Text("Skills",style: TextStyle(color: state.currentOption==MenuOption.skills?Colors.black:Colors.grey),)),
+                _space(),
+                TextButton(onPressed: (){
+                  state.change(MenuOption.home);
+                }, child:Text("Projects",style: TextStyle(color: state.currentOption==MenuOption.projects?Colors.black:Colors.grey),)),
+                _space(),
+                TextButton(onPressed: (){
+                  state.change(MenuOption.home);
+                }, child:Text("Contact",style: TextStyle(color: state.currentOption==MenuOption.contact?Colors.black:Colors.grey),)),
+                _space(),
+              ],
+            ),
+          ),
+        );
+      }
     );
   }
   Widget _space(){

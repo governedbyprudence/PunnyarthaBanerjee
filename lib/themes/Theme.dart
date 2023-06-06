@@ -10,7 +10,7 @@ class AppThemes{
       fontFamily: "SanFransisco",
       primaryColor: Colors.black,
       primarySwatch: Colors.grey,
-      appBarTheme:const AppBarTheme(backgroundColor: Colors.white,elevation: 0),
+      appBarTheme:const AppBarTheme(backgroundColor: Colors.transparent,elevation: 0),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: Colors.black,

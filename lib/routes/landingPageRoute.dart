@@ -23,7 +23,7 @@ class _LandingPageRouteState extends State<LandingPageRoute> {
       builder: (context,state,child) {
         return Scaffold(
           appBar: PreferredSize(preferredSize: Size.fromHeight(4.h),
-          child: state.isMobile?const MobileAppBar():const WebAppBar()),
+          child: state.isMobile?const MobileAppBar():WebAppBar()),
           body: SingleChildScrollView(
             physics:const ClampingScrollPhysics(),
             child: Column(
