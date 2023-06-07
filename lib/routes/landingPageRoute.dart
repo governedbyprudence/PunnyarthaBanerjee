@@ -51,61 +51,68 @@ class _LandingPageRouteState extends State<LandingPageRoute> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          DefaultTextStyle(
-            style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w700,color: Colors.black),
-            child: Container(
-              padding: EdgeInsets.only(top: 45.sp,left: 40.sp),
-              width: 55.w,
-              alignment: Alignment.centerLeft,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Welcome.",style: TextStyle(fontSize: 30.sp,color: AppThemes.mainViolet),),
-                  SizedBox(height: 10.sp,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("I am a"),
-                      AnimatedTextKit(
-                      repeatForever: true,
-                      animatedTexts: [
-                        TyperAnimatedText("Developer"),
-                        TyperAnimatedText("Tech Enthusiast"),
-                        TyperAnimatedText("Traveller"),
+          Expanded(
+            child: DefaultTextStyle(
+              style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w700,color: Colors.black),
+              child: Container(
+                padding: EdgeInsets.only(top: 40.sp,left: 35.sp,right: 20.sp),
+                width: 55.w,
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Welcome.",style: TextStyle(fontSize: 30.sp,color: AppThemes.mainViolet),),
+                    SizedBox(height: 10.sp,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text("I am a"),
+                        AnimatedTextKit(
+                        repeatForever: true,
+                        animatedTexts: [
+                          TyperAnimatedText("Developer"),
+                          TyperAnimatedText("Tech Enthusiast"),
+                          TyperAnimatedText("Traveller"),
+                        ],
+                        ),
+                        const SizedBox(width: 40,)
                       ],
+                    ),
+                    SizedBox(height: 18.sp,),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      decoration: BoxDecoration(
+                        color: AppThemes.mainViolet,
+                        borderRadius: BorderRadius.circular(20.sp)
                       ),
-                      const SizedBox(width: 40,)
-                    ],
-                  ),
-                  SizedBox(height: 18.sp,),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    decoration: BoxDecoration(
-                      color: AppThemes.mainViolet,
-                      borderRadius: BorderRadius.circular(20.sp)
-                    ),
-                    height: 6.h,
-                    width: 12.w,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children:[
-                        Text("See my work !",style: TextStyle(fontSize: 11.sp,color: Colors.white),),
-                        const Icon(Icons.telegram_outlined,color: Colors.white,)
-                      ],
-                    ),
-                  )
-                ],
+                      height: 6.h,
+                      width: 12.w,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children:[
+                          Text("See my work !",style: TextStyle(fontSize: 11.sp,color: Colors.white),),
+                          const Icon(Icons.telegram_outlined,color: Colors.white,)
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-          Container(
-            height: 80.h,
-            width: 35.w,
+          Expanded(
+              child: Container(
+                alignment: Alignment.topCenter,
+                margin: EdgeInsets.only(top: 20.sp),
+                padding: EdgeInsets.symmetric(horizontal: 40.sp,vertical: 30.sp),
+                child: Container(
+            height: 50.h,
             decoration:BoxDecoration(
-              color: AppThemes.mainYellow,
-              borderRadius: BorderRadius.circular(50.sp)
+                  color: AppThemes.mainYellow,
+                  borderRadius: BorderRadius.circular(50.sp)
             ),
-          )
+          ),
+              ))
         ],
       ),
     );
@@ -118,11 +125,20 @@ class _LandingPageRouteState extends State<LandingPageRoute> {
           DefaultTextStyle(
             style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w700,color: Colors.black),
             child: Container(
-              padding: EdgeInsets.only(top: 45.sp),
+              padding: EdgeInsets.only(top: 20.sp),
               alignment: Alignment.center,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Container(
+                    height: 35.h,
+                    width: 50.w,
+                    decoration:BoxDecoration(
+                        color: AppThemes.mainYellow,
+                        borderRadius: BorderRadius.circular(50.sp)
+                    ),
+                  ),
+                  SizedBox(height: 35.sp,),
                   Text("Welcome.",style: TextStyle(fontSize: 30.sp,color: AppThemes.mainViolet),),
                   SizedBox(height: 15.sp,),
                   const Text("I am a"),
@@ -161,15 +177,7 @@ class _LandingPageRouteState extends State<LandingPageRoute> {
               ),
             ),
           ),
-          SizedBox(height: 30.sp,),
-          Container(
-            height: 30.h,
-            width: 50.w,
-            decoration:BoxDecoration(
-                color: AppThemes.mainYellow,
-                borderRadius: BorderRadius.circular(50.sp)
-            ),
-          )
+
         ],
       ),
     );

@@ -24,24 +24,24 @@ class WebAppBar extends StatelessWidget with PreferredSizeWidget{
                 TextButton(onPressed: (){
                   state.change(MenuOption.home);
                   Navigator.pushReplacementNamed(context, LandingPageRoute.routeName);
-                }, child:Text("Home",style: TextStyle(color: state.currentOption==MenuOption.home?Colors.black:Colors.grey),)),
+                }, child:Text("Home",style: TextStyle(color: state.currentOption==MenuOption.home?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){
                   state.change(MenuOption.about);
                   Navigator.pushReplacementNamed(context, AboutPageRoute.routeName);
-                }, child:Text("About",style: TextStyle(color: state.currentOption==MenuOption.about?Colors.black:Colors.grey),)),
+                }, child:Text("About",style: TextStyle(color: state.currentOption==MenuOption.about?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){
                   state.change(MenuOption.home);
-                }, child:Text("Skills",style: TextStyle(color: state.currentOption==MenuOption.skills?Colors.black:Colors.grey),)),
+                }, child:Text("Skills",style: TextStyle(color: state.currentOption==MenuOption.skills?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){
                   state.change(MenuOption.home);
-                }, child:Text("Projects",style: TextStyle(color: state.currentOption==MenuOption.projects?Colors.black:Colors.grey),)),
+                }, child:Text("Projects",style: TextStyle(color: state.currentOption==MenuOption.projects?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){
                   state.change(MenuOption.home);
-                }, child:Text("Contact",style: TextStyle(color: state.currentOption==MenuOption.contact?Colors.black:Colors.grey),)),
+                }, child:Text("Contact",style: TextStyle(color: state.currentOption==MenuOption.contact?Colors.black:Colors.black54),)),
                 _space(),
               ],
             ),
