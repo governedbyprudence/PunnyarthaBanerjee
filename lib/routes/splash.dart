@@ -42,10 +42,7 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> with SingleTicker
           width: double.infinity,
           child: Column(
             children: [
-              RotationTransition(
-                turns: Tween(begin: 0.0,end: 1.0).animate(_controller),
-                child: Icon(Icons.account_box,size:65.sp,),
-              ),
+              Image.asset("assets/images/loading.gif")
             ],
           )
         ),

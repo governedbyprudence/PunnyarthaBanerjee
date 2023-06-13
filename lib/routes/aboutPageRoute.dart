@@ -82,44 +82,31 @@ class _AboutPageRouteState extends State<AboutPageRoute> {
         child: Container(
           height: 120.h,
           width: 100.w,
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Container(
-                ),
-              ),
-              Expanded(
-                flex: 8,
-                child: Container(
-                    padding:EdgeInsets.symmetric(vertical: 40,horizontal: 20.sp),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Container(
+              padding:EdgeInsets.symmetric(vertical: 40,horizontal: 20.sp),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 2.h,),
+                  Text("About Me.",style:TextStyle(fontWeight: FontWeight.w700,fontSize: 25.sp)),
+                  DefaultTextStyle(
+                    style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w600,color: Colors.black),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 7.h,),
-                        Text("About Me.",style:TextStyle(fontWeight: FontWeight.w700,fontSize: 25.sp)),
-                        DefaultTextStyle(
-                          style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w600,color: Colors.black),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              SizedBox(height: 50,),
-                              Text("I am a passionate Python and Flutter developer, with a strong desire to contribute and make a meaningful impact in the world of technology."),
-                              SizedBox(height: 40,),
-                              Text("From a young age, I have been fascinated by the limitless possibilities that programming offers."),
-                              SizedBox(height: 40,),
-                              Text("This fascination led me to pursue a career in software development, where I continuously strive to expand my knowledge and expertise in Python and Flutter."),
-                              SizedBox(height: 20,),
-                            ],
-                          ),
-                        )
+                      children: const [
+                        SizedBox(height: 50,),
+                        Text("I am a passionate Python and Flutter developer, with a strong desire to contribute and make a meaningful impact in the world of technology."),
+                        SizedBox(height: 40,),
+                        Text("From a young age, I have been fascinated by the limitless possibilities that programming offers."),
+                        SizedBox(height: 40,),
+                        Text("This fascination led me to pursue a career in software development, where I continuously strive to expand my knowledge and expertise in Python and Flutter."),
+                        SizedBox(height: 20,),
                       ],
-                    )
-                ),
-              ),
-
-            ],
+                    ),
+                  )
+                ],
+              )
           ),
         ),
       );

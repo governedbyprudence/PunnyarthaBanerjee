@@ -5,6 +5,8 @@ import 'package:punnyartha/routes/aboutPageRoute.dart';
 import 'package:punnyartha/routes/landingPageRoute.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../routes/contactPageRoute.dart';
+
 class WebAppBar extends StatelessWidget with PreferredSizeWidget{
   Color backgroundColor;
   WebAppBar({Key? key,this.backgroundColor=Colors.white}) : super(key: key);
@@ -40,7 +42,8 @@ class WebAppBar extends StatelessWidget with PreferredSizeWidget{
                 }, child:Text("Projects",style: TextStyle(color: state.currentOption==MenuOption.projects?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){
-                  state.change(MenuOption.home);
+                  state.change(MenuOption.contact);
+                  Navigator.pushReplacementNamed(context, ContactPageRoute.routeName);
                 }, child:Text("Contact",style: TextStyle(color: state.currentOption==MenuOption.contact?Colors.black:Colors.black54),)),
                 _space(),
               ],
