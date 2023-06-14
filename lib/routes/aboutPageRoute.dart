@@ -20,6 +20,7 @@ class _AboutPageRouteState extends State<AboutPageRoute> {
   Widget build(BuildContext context) {
     return Consumer<DeviceTypeProvider>(
       builder:(context,state,child)=>Scaffold(
+        extendBodyBehindAppBar: true,
         appBar: PreferredSize(preferredSize: Size.fromHeight(4.h),
             child: state.isMobile?AppBar(backgroundColor: AppThemes.mainYellow,):WebAppBar(backgroundColor: AppThemes.mainYellow,)),
         drawer: state.isMobile?const CustomDrawer():null,
