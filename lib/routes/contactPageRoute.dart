@@ -138,6 +138,103 @@ class _ContactPageRouteState extends State<ContactPageRoute> with SingleTickerPr
     );
   }
   Widget _mobileBody(){
-  return Container(color:Colors.black45,);
+    return SingleChildScrollView(
+      physics: const ClampingScrollPhysics(),
+      child: Container(
+        height: 100.h,
+        width: 100.w,
+        child: Column(
+          children: [
+            SizedBox(height: 10.h,),
+            Expanded(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 50),
+                  margin: const EdgeInsets.only(top: 15),
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text("Contact",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24.sp,color: AppThemes.mainViolet)),
+                            const SizedBox(width: 20,),
+                            Text("Me !",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 23.sp)),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 5.h,),
+                      Row(
+                        children: [
+                          const Icon(SimpleIcons.linkedin,size: 40,color: Color(0xff0A66C2),),
+                          const SizedBox(width: 10,),
+                          TextButton(onPressed: ()async{
+                            Uri url = Uri.parse(Social.linkedInUrl);
+                            await launchUrl(url);
+                          }, child:Text("Punnyartha Banerjee",style: TextStyle(fontSize: 15.sp),))
+                        ],
+                      ),
+                      SizedBox(height: 2.h,),
+                      Row(
+                        children: [
+                          const Icon(SimpleIcons.github,size: 40,),
+                          const SizedBox(width: 10,),
+                          TextButton(onPressed: ()async{
+                            Uri url = Uri.parse(Social.githubUrl);
+                            await launchUrl(url);
+                          }, child:Text("governedbyprudence",style: TextStyle(fontSize: 15.sp),),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 2.h,),
+                      Row(
+                        children: [
+                          const Icon(SimpleIcons.twitter,size: 40,color: Color(0xff00ACEE)),
+                          const SizedBox(width: 10,),
+                          TextButton(onPressed: ()async{
+                            Uri url = Uri.parse(Social.twitterUrl);
+                            await launchUrl(url);
+                          }, child:Text("@punnyartha",style: TextStyle(fontSize: 15.sp),))
+                        ],
+                      ),
+                      SizedBox(height: 2.h,),
+                      Row(
+                        children: [
+                          const Icon(SimpleIcons.gmail,size: 40,color: Colors.red,),
+                          const SizedBox(width: 10,),
+                          TextButton(onPressed: ()async{
+                          }, child:Text("punnyarthabanerjee@gmail.com",style: TextStyle(fontSize: 15.sp),))
+                        ],
+                      ),
+                    ],
+                  ),
+                )),
+            Expanded(
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                        child: Container(
+                          decoration:const BoxDecoration(
+                              color: AppThemes.mainViolet,
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(120),topRight: Radius.circular(120))
+                          ),
+                        )),
+                    Container(
+                      height: 40.h,
+                      width: 100.w,
+                      margin: EdgeInsets.only(bottom: 10.sp),
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image:AssetImage("assets/images/contact2.gif",),
+                              fit: BoxFit.contain
+                          )
+                      ),),
+                  ],
+                )),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -6,6 +6,8 @@ import 'package:punnyartha/routes/landingPageRoute.dart';
 import 'package:punnyartha/themes/Theme.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../routes/contactPageRoute.dart';
+
 class CustomDrawer extends StatelessWidget {
   //Color color;
   const CustomDrawer({Key? key}) : super(key: key);
@@ -34,6 +36,7 @@ class CustomDrawer extends StatelessWidget {
             },title: Text("Projects",style: TextStyle(color: state.currentOption==MenuOption.projects?AppThemes.mainYellow:Colors.white),),),
             ListTile(onTap: (){
               state.change(MenuOption.contact);
+              Navigator.pushReplacementNamed(context, ContactPageRoute.routeName);
             },title: Text("Contact",style: TextStyle(color: state.currentOption==MenuOption.contact?AppThemes.mainYellow:Colors.white),),),
           ],
         )

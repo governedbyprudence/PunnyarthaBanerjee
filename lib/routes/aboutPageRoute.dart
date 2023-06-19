@@ -89,7 +89,7 @@ class _AboutPageRouteState extends State<AboutPageRoute> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 2.h,),
+                  SizedBox(height: 20.h,),
                   Text("About Me.",style:TextStyle(fontWeight: FontWeight.w700,fontSize: 25.sp)),
                   DefaultTextStyle(
                     style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w600,color: Colors.black),

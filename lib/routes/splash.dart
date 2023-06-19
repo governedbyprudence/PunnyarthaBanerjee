@@ -29,7 +29,7 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> with SingleTicker
     _controller.addListener(() {
           if(_controller.isCompleted){
             debugPrint("Completed");
-            Navigator.pushReplacementNamed(context, LandingPageRoute.routeName);
+           Navigator.pushReplacementNamed(context, LandingPageRoute.routeName);
           }
     });
   }
@@ -41,6 +41,8 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> with SingleTicker
           height: double.infinity,
           width: double.infinity,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("assets/images/loading.gif")
             ],
