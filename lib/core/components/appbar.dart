@@ -6,6 +6,7 @@ import 'package:punnyartha/routes/landingPageRoute.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../routes/contactPageRoute.dart';
+import '../../routes/skillsPageRoute.dart';
 
 class WebAppBar extends StatelessWidget with PreferredSizeWidget{
   Color backgroundColor;
@@ -34,7 +35,8 @@ class WebAppBar extends StatelessWidget with PreferredSizeWidget{
                 }, child:Text("About",style: TextStyle(color: state.currentOption==MenuOption.about?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){
-                  state.change(MenuOption.home);
+                  state.change(MenuOption.skills);
+                  Navigator.pushReplacementNamed(context, SkillsPageRoute.routeName);
                 }, child:Text("Skills",style: TextStyle(color: state.currentOption==MenuOption.skills?Colors.black:Colors.black54),)),
                 _space(),
                 TextButton(onPressed: (){

@@ -7,6 +7,7 @@ import 'package:punnyartha/themes/Theme.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../routes/contactPageRoute.dart';
+import '../../routes/skillsPageRoute.dart';
 
 class CustomDrawer extends StatelessWidget {
   //Color color;
@@ -30,6 +31,7 @@ class CustomDrawer extends StatelessWidget {
             },title: Text("About",style: TextStyle(color: state.currentOption==MenuOption.about?AppThemes.mainYellow:Colors.white),),),
             ListTile(onTap: (){
               state.change(MenuOption.skills);
+              Navigator.pushReplacementNamed(context, SkillsPageRoute.routeName);
             },title: Text("Skills",style: TextStyle(color: state.currentOption==MenuOption.skills?AppThemes.mainYellow:Colors.white),),),
             ListTile(onTap: (){
               state.change(MenuOption.projects);

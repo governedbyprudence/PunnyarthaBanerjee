@@ -5,6 +5,7 @@ import 'package:punnyartha/core/providers/optionProvider.dart';
 import 'package:punnyartha/routes/aboutPageRoute.dart';
 import 'package:punnyartha/routes/contactPageRoute.dart';
 import 'package:punnyartha/routes/landingPageRoute.dart';
+import 'package:punnyartha/routes/skillsPageRoute.dart';
 import 'package:punnyartha/routes/splash.dart';
 import 'package:punnyartha/themes/Theme.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -30,6 +31,7 @@ class MainApp extends StatelessWidget {
             SplashScreenRoute.routeName:(context)=>ChangeNotifierProvider(create: (_)=>DeviceTypeProvider(context: context),child:const SplashScreenRoute()),
             AboutPageRoute.routeName:(context)=>ChangeNotifierProvider(create: (_)=>DeviceTypeProvider(context: context),child:const AboutPageRoute()),
             ContactPageRoute.routeName:(context)=>ChangeNotifierProvider(create: (_)=>DeviceTypeProvider(context: context),child:const ContactPageRoute()),
+            SkillsPageRoute.routeName:(context)=>ChangeNotifierProvider(create: (_)=>DeviceTypeProvider(context: context),child:const SkillsPageRoute()),
           },
           initialRoute: SplashScreenRoute.routeName,
         ),

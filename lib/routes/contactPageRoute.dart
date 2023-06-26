@@ -156,11 +156,10 @@ class _ContactPageRouteState extends State<ContactPageRoute> with SingleTickerPr
                         alignment: Alignment.center,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text("Contact",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24.sp,color: AppThemes.mainViolet)),
                             const SizedBox(width: 20,),
-                            Text("Me !",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 23.sp)),
+                            Text("Me !",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24.sp)),
                           ],
                         ),
                       ),

@@ -4,6 +4,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class AppThemes{
   static const mainYellow = Color(0xfff6db7a);
   static const mainViolet = Color(0xff8574e7);
+  static const deepViolet = Color(0xff1E152A);
   static const mainPink = Color(0xfff9daca);
   static ThemeData mainTheme(){
     return ThemeData(
@@ -25,4 +26,5 @@ class AppThemes{
 // #F6DB7A yellow
 // #8574E7 violet
 // #F9DACA pink
+// #0xff1E152A deep violet
 // font sans francisco
